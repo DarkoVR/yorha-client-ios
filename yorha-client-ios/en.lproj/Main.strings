@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "Race"; ObjectID = "17d-zx-6Tx"; */
+"17d-zx-6Tx.text" = "Race";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "CCd-VF-By6"; */
+"CCd-VF-By6.text" = "Name";
+
+/* Class = "UILabel"; text = "Occupation"; ObjectID = "D7D-4I-krP"; */
+"D7D-4I-krP.text" = "Occupation";
+
+/* Class = "UITabBarItem"; title = "Automatas"; ObjectID = "OU2-T9-C61"; */
+"OU2-T9-C61.title" = "Automatas";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "gSK-dg-1Xs"; */
+"gSK-dg-1Xs.text" = "Name";
+
+/* Class = "UILabel"; text = "Occupation"; ObjectID = "z1m-gL-Bwj"; */
+"z1m-gL-Bwj.text" = "Occupation";
