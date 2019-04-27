@@ -7,6 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4556285D2273EF4E00DE9685 /* WeaponPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455628572273EF4E00DE9685 /* WeaponPresenter.swift */; };
+		4556285E2273EF4E00DE9685 /* WeaponRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455628582273EF4E00DE9685 /* WeaponRouter.swift */; };
+		4556285F2273EF4E00DE9685 /* WeaponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455628592273EF4E00DE9685 /* WeaponViewController.swift */; };
+		455628602273EF4E00DE9685 /* WeaponProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4556285A2273EF4E00DE9685 /* WeaponProtocols.swift */; };
+		455628612273EF4E00DE9685 /* WeaponInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4556285B2273EF4E00DE9685 /* WeaponInteractor.swift */; };
+		455628622273EF4E00DE9685 /* WeaponViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4556285C2273EF4E00DE9685 /* WeaponViewController.xib */; };
+		455628992273EFC800DE9685 /* PodProgramPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455628932273EFC800DE9685 /* PodProgramPresenter.swift */; };
+		4556289A2273EFC800DE9685 /* PodProgramRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455628942273EFC800DE9685 /* PodProgramRouter.swift */; };
+		4556289B2273EFC800DE9685 /* PodProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455628952273EFC800DE9685 /* PodProgramViewController.swift */; };
+		4556289C2273EFC800DE9685 /* PodProgramProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455628962273EFC800DE9685 /* PodProgramProtocols.swift */; };
+		4556289D2273EFC800DE9685 /* PodProgramInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455628972273EFC800DE9685 /* PodProgramInteractor.swift */; };
+		4556289E2273EFC800DE9685 /* PodProgramViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 455628982273EFC800DE9685 /* PodProgramViewController.xib */; };
+		4577D9D022751CE4009D87C3 /* BossPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4577D9CA22751CE4009D87C3 /* BossPresenter.swift */; };
+		4577D9D122751CE4009D87C3 /* BossRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4577D9CB22751CE4009D87C3 /* BossRouter.swift */; };
+		4577D9D222751CE4009D87C3 /* BossViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4577D9CC22751CE4009D87C3 /* BossViewController.swift */; };
+		4577D9D322751CE4009D87C3 /* BossProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4577D9CD22751CE4009D87C3 /* BossProtocols.swift */; };
+		4577D9D422751CE4009D87C3 /* BossInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4577D9CE22751CE4009D87C3 /* BossInteractor.swift */; };
+		4577D9D522751CE4009D87C3 /* BossViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4577D9CF22751CE4009D87C3 /* BossViewController.xib */; };
+		4577D9DD22751D53009D87C3 /* AutomataPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4577D9D722751D53009D87C3 /* AutomataPresenter.swift */; };
+		4577D9DE22751D53009D87C3 /* AutomataRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4577D9D822751D53009D87C3 /* AutomataRouter.swift */; };
+		4577D9DF22751D53009D87C3 /* AutomataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4577D9D922751D53009D87C3 /* AutomataViewController.swift */; };
+		4577D9E022751D53009D87C3 /* AutomataProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4577D9DA22751D53009D87C3 /* AutomataProtocols.swift */; };
+		4577D9E122751D53009D87C3 /* AutomataInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4577D9DB22751D53009D87C3 /* AutomataInteractor.swift */; };
+		4577D9E222751D53009D87C3 /* AutomataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4577D9DC22751D53009D87C3 /* AutomataViewController.xib */; };
 		45E8CC6B225E8060004147BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E8CC6A225E8060004147BF /* AppDelegate.swift */; };
 		45E8CC6D225E8060004147BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E8CC6C225E8060004147BF /* ViewController.swift */; };
 		45E8CC70225E8060004147BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45E8CC6E225E8060004147BF /* Main.storyboard */; };
@@ -16,6 +40,30 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		455628572273EF4E00DE9685 /* WeaponPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponPresenter.swift; sourceTree = "<group>"; };
+		455628582273EF4E00DE9685 /* WeaponRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponRouter.swift; sourceTree = "<group>"; };
+		455628592273EF4E00DE9685 /* WeaponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponViewController.swift; sourceTree = "<group>"; };
+		4556285A2273EF4E00DE9685 /* WeaponProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponProtocols.swift; sourceTree = "<group>"; };
+		4556285B2273EF4E00DE9685 /* WeaponInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponInteractor.swift; sourceTree = "<group>"; };
+		4556285C2273EF4E00DE9685 /* WeaponViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeaponViewController.xib; sourceTree = "<group>"; };
+		455628932273EFC800DE9685 /* PodProgramPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodProgramPresenter.swift; sourceTree = "<group>"; };
+		455628942273EFC800DE9685 /* PodProgramRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodProgramRouter.swift; sourceTree = "<group>"; };
+		455628952273EFC800DE9685 /* PodProgramViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodProgramViewController.swift; sourceTree = "<group>"; };
+		455628962273EFC800DE9685 /* PodProgramProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodProgramProtocols.swift; sourceTree = "<group>"; };
+		455628972273EFC800DE9685 /* PodProgramInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodProgramInteractor.swift; sourceTree = "<group>"; };
+		455628982273EFC800DE9685 /* PodProgramViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PodProgramViewController.xib; sourceTree = "<group>"; };
+		4577D9CA22751CE4009D87C3 /* BossPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BossPresenter.swift; sourceTree = "<group>"; };
+		4577D9CB22751CE4009D87C3 /* BossRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BossRouter.swift; sourceTree = "<group>"; };
+		4577D9CC22751CE4009D87C3 /* BossViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BossViewController.swift; sourceTree = "<group>"; };
+		4577D9CD22751CE4009D87C3 /* BossProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BossProtocols.swift; sourceTree = "<group>"; };
+		4577D9CE22751CE4009D87C3 /* BossInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BossInteractor.swift; sourceTree = "<group>"; };
+		4577D9CF22751CE4009D87C3 /* BossViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BossViewController.xib; sourceTree = "<group>"; };
+		4577D9D722751D53009D87C3 /* AutomataPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomataPresenter.swift; sourceTree = "<group>"; };
+		4577D9D822751D53009D87C3 /* AutomataRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomataRouter.swift; sourceTree = "<group>"; };
+		4577D9D922751D53009D87C3 /* AutomataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomataViewController.swift; sourceTree = "<group>"; };
+		4577D9DA22751D53009D87C3 /* AutomataProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomataProtocols.swift; sourceTree = "<group>"; };
+		4577D9DB22751D53009D87C3 /* AutomataInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomataInteractor.swift; sourceTree = "<group>"; };
+		4577D9DC22751D53009D87C3 /* AutomataViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutomataViewController.xib; sourceTree = "<group>"; };
 		45E8CC67225E8060004147BF /* yorha-client-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "yorha-client-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45E8CC6A225E8060004147BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45E8CC6C225E8060004147BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +85,69 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		452856592273ECAE00ABCB89 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				4577D9D622751D3E009D87C3 /* Automatas */,
+				4577D9C922751C8E009D87C3 /* Bosses */,
+				455628562273EF3000DE9685 /* PodPrograms */,
+				455628542273EF1800DE9685 /* Weapons */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		455628542273EF1800DE9685 /* Weapons */ = {
+			isa = PBXGroup;
+			children = (
+				455628572273EF4E00DE9685 /* WeaponPresenter.swift */,
+				455628582273EF4E00DE9685 /* WeaponRouter.swift */,
+				455628592273EF4E00DE9685 /* WeaponViewController.swift */,
+				4556285A2273EF4E00DE9685 /* WeaponProtocols.swift */,
+				4556285B2273EF4E00DE9685 /* WeaponInteractor.swift */,
+				4556285C2273EF4E00DE9685 /* WeaponViewController.xib */,
+			);
+			path = Weapons;
+			sourceTree = "<group>";
+		};
+		455628562273EF3000DE9685 /* PodPrograms */ = {
+			isa = PBXGroup;
+			children = (
+				455628932273EFC800DE9685 /* PodProgramPresenter.swift */,
+				455628942273EFC800DE9685 /* PodProgramRouter.swift */,
+				455628952273EFC800DE9685 /* PodProgramViewController.swift */,
+				455628962273EFC800DE9685 /* PodProgramProtocols.swift */,
+				455628972273EFC800DE9685 /* PodProgramInteractor.swift */,
+				455628982273EFC800DE9685 /* PodProgramViewController.xib */,
+			);
+			path = PodPrograms;
+			sourceTree = "<group>";
+		};
+		4577D9C922751C8E009D87C3 /* Bosses */ = {
+			isa = PBXGroup;
+			children = (
+				4577D9CA22751CE4009D87C3 /* BossPresenter.swift */,
+				4577D9CB22751CE4009D87C3 /* BossRouter.swift */,
+				4577D9CC22751CE4009D87C3 /* BossViewController.swift */,
+				4577D9CD22751CE4009D87C3 /* BossProtocols.swift */,
+				4577D9CE22751CE4009D87C3 /* BossInteractor.swift */,
+				4577D9CF22751CE4009D87C3 /* BossViewController.xib */,
+			);
+			path = Bosses;
+			sourceTree = "<group>";
+		};
+		4577D9D622751D3E009D87C3 /* Automatas */ = {
+			isa = PBXGroup;
+			children = (
+				4577D9D722751D53009D87C3 /* AutomataPresenter.swift */,
+				4577D9D822751D53009D87C3 /* AutomataRouter.swift */,
+				4577D9D922751D53009D87C3 /* AutomataViewController.swift */,
+				4577D9DA22751D53009D87C3 /* AutomataProtocols.swift */,
+				4577D9DB22751D53009D87C3 /* AutomataInteractor.swift */,
+				4577D9DC22751D53009D87C3 /* AutomataViewController.xib */,
+			);
+			path = Automatas;
+			sourceTree = "<group>";
+		};
 		45E8CC5E225E8060004147BF = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +167,7 @@
 		45E8CC69225E8060004147BF /* yorha-client-ios */ = {
 			isa = PBXGroup;
 			children = (
+				452856592273ECAE00ABCB89 /* Modules */,
 				45E8CC6A225E8060004147BF /* AppDelegate.swift */,
 				45E8CC6C225E8060004147BF /* ViewController.swift */,
 				45E8CC6E225E8060004147BF /* Main.storyboard */,
@@ -125,9 +237,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4577D9E222751D53009D87C3 /* AutomataViewController.xib in Resources */,
 				45E8CC78225E8061004147BF /* LaunchScreen.storyboard in Resources */,
 				45E8CC75225E8061004147BF /* Assets.xcassets in Resources */,
+				4556289E2273EFC800DE9685 /* PodProgramViewController.xib in Resources */,
+				4577D9D522751CE4009D87C3 /* BossViewController.xib in Resources */,
 				45E8CC70225E8060004147BF /* Main.storyboard in Resources */,
+				455628622273EF4E00DE9685 /* WeaponViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +254,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4556285F2273EF4E00DE9685 /* WeaponViewController.swift in Sources */,
+				4556289B2273EFC800DE9685 /* PodProgramViewController.swift in Sources */,
+				4577D9D222751CE4009D87C3 /* BossViewController.swift in Sources */,
+				4577D9E022751D53009D87C3 /* AutomataProtocols.swift in Sources */,
+				4577D9E122751D53009D87C3 /* AutomataInteractor.swift in Sources */,
+				4556289D2273EFC800DE9685 /* PodProgramInteractor.swift in Sources */,
+				4577D9DE22751D53009D87C3 /* AutomataRouter.swift in Sources */,
+				4577D9D322751CE4009D87C3 /* BossProtocols.swift in Sources */,
+				4577D9D022751CE4009D87C3 /* BossPresenter.swift in Sources */,
+				4577D9DD22751D53009D87C3 /* AutomataPresenter.swift in Sources */,
+				4556289C2273EFC800DE9685 /* PodProgramProtocols.swift in Sources */,
+				4556285D2273EF4E00DE9685 /* WeaponPresenter.swift in Sources */,
+				4577D9D122751CE4009D87C3 /* BossRouter.swift in Sources */,
+				455628612273EF4E00DE9685 /* WeaponInteractor.swift in Sources */,
+				455628602273EF4E00DE9685 /* WeaponProtocols.swift in Sources */,
 				45E8CC6D225E8060004147BF /* ViewController.swift in Sources */,
 				45E8CC6B225E8060004147BF /* AppDelegate.swift in Sources */,
+				4556289A2273EFC800DE9685 /* PodProgramRouter.swift in Sources */,
+				4556285E2273EF4E00DE9685 /* WeaponRouter.swift in Sources */,
+				4577D9D422751CE4009D87C3 /* BossInteractor.swift in Sources */,
 				45E8CC73225E8060004147BF /* yorha_client_ios.xcdatamodeld in Sources */,
+				455628992273EFC800DE9685 /* PodProgramPresenter.swift in Sources */,
+				4577D9DF22751D53009D87C3 /* AutomataViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
