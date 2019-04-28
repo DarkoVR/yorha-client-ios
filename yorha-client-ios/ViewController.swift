@@ -8,13 +8,17 @@
 
 import UIKit
 
-class ViewController: UITabBarController {
+class ViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func refresh(_ sender: UIRefreshControl) {
+        print("refreshing done!")
+        sender.endRefreshing()
+    }
+    
 }
 

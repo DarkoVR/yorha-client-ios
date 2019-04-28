@@ -148,6 +148,29 @@
 			path = Automatas;
 			sourceTree = "<group>";
 		};
+		4577D9E322751FC9009D87C3 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				4577D9E52275201C009D87C3 /* CoreData */,
+				4577D9E422751FEB009D87C3 /* Network */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		4577D9E422751FEB009D87C3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		4577D9E52275201C009D87C3 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		45E8CC5E225E8060004147BF = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +190,7 @@
 		45E8CC69225E8060004147BF /* yorha-client-ios */ = {
 			isa = PBXGroup;
 			children = (
+				4577D9E322751FC9009D87C3 /* DataManager */,
 				452856592273ECAE00ABCB89 /* Modules */,
 				45E8CC6A225E8060004147BF /* AppDelegate.swift */,
 				45E8CC6C225E8060004147BF /* ViewController.swift */,

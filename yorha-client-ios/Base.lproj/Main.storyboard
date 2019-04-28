@@ -73,10 +73,10 @@
             </objects>
             <point key="canvasLocation" x="1852" y="-583"/>
         </scene>
-        <!--Table View Controller-->
+        <!--View Controller-->
         <scene sceneID="oae-d8-6Cd">
             <objects>
-                <tableViewController id="vTn-WL-1Mo" sceneMemberID="viewController">
+                <tableViewController id="vTn-WL-1Mo" customClass="ViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FzJ-pV-Jdv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -131,6 +131,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="G3I-Nj-XRh"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="TBo-dl-awZ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <action selector="refresh:" destination="vTn-WL-1Mo" eventType="valueChanged" id="K0r-HK-uGh"/>
+                        </connections>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iey-hW-WTE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
