@@ -76,7 +76,7 @@
         <!--View Controller-->
         <scene sceneID="oae-d8-6Cd">
             <objects>
-                <tableViewController id="vTn-WL-1Mo" customClass="ViewController" sceneMemberID="viewController">
+                <tableViewController id="vTn-WL-1Mo" customClass="ViewController" customModule="yorha_client_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FzJ-pV-Jdv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,7 +135,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <connections>
-                            <action selector="refresh:" destination="vTn-WL-1Mo" eventType="valueChanged" id="K0r-HK-uGh"/>
+                            <action selector="refresh:" destination="vTn-WL-1Mo" eventType="valueChanged" id="yuY-Jp-5TV"/>
                         </connections>
                     </refreshControl>
                 </tableViewController>

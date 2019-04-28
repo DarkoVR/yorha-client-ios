@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		454095A722755A54009CDB64 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454095A622755A54009CDB64 /* Endpoints.swift */; };
+		454095A922755A66009CDB64 /* PersistenceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454095A822755A66009CDB64 /* PersistenceError.swift */; };
 		4556285D2273EF4E00DE9685 /* WeaponPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455628572273EF4E00DE9685 /* WeaponPresenter.swift */; };
 		4556285E2273EF4E00DE9685 /* WeaponRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455628582273EF4E00DE9685 /* WeaponRouter.swift */; };
 		4556285F2273EF4E00DE9685 /* WeaponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455628592273EF4E00DE9685 /* WeaponViewController.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		454095A622755A54009CDB64 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		454095A822755A66009CDB64 /* PersistenceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceError.swift; sourceTree = "<group>"; };
 		455628572273EF4E00DE9685 /* WeaponPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponPresenter.swift; sourceTree = "<group>"; };
 		455628582273EF4E00DE9685 /* WeaponRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponRouter.swift; sourceTree = "<group>"; };
 		455628592273EF4E00DE9685 /* WeaponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +98,15 @@
 				455628542273EF1800DE9685 /* Weapons */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		454095A522755A25009CDB64 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				454095A622755A54009CDB64 /* Endpoints.swift */,
+				454095A822755A66009CDB64 /* PersistenceError.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		455628542273EF1800DE9685 /* Weapons */ = {
@@ -151,6 +164,7 @@
 		4577D9E322751FC9009D87C3 /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
+				454095A522755A25009CDB64 /* Common */,
 				4577D9E52275201C009D87C3 /* CoreData */,
 				4577D9E422751FEB009D87C3 /* Network */,
 			);
@@ -289,6 +303,7 @@
 				4577D9D022751CE4009D87C3 /* BossPresenter.swift in Sources */,
 				4577D9DD22751D53009D87C3 /* AutomataPresenter.swift in Sources */,
 				4556289C2273EFC800DE9685 /* PodProgramProtocols.swift in Sources */,
+				454095A922755A66009CDB64 /* PersistenceError.swift in Sources */,
 				4556285D2273EF4E00DE9685 /* WeaponPresenter.swift in Sources */,
 				4577D9D122751CE4009D87C3 /* BossRouter.swift in Sources */,
 				455628612273EF4E00DE9685 /* WeaponInteractor.swift in Sources */,
@@ -300,6 +315,7 @@
 				4577D9D422751CE4009D87C3 /* BossInteractor.swift in Sources */,
 				45E8CC73225E8060004147BF /* yorha_client_ios.xcdatamodeld in Sources */,
 				455628992273EFC800DE9685 /* PodProgramPresenter.swift in Sources */,
+				454095A722755A54009CDB64 /* Endpoints.swift in Sources */,
 				4577D9DF22751D53009D87C3 /* AutomataViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
