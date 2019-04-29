@@ -13,7 +13,7 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        print(componentUrl(endpoint: Endpoints.automatas.path, id: 1))
+        AutomataSession.init().retrieveAutomatas()
     }
 
     @IBAction func refresh(_ sender: UIRefreshControl) {
