@@ -15,6 +15,7 @@ struct Automata: Codable {
     var Name: String
     var Occupation: String
     var Photo: String
+    var RaceID: Int
     var Race: Race
 }
 
@@ -28,5 +29,6 @@ public class AutomataCoreData: NSManagedObject {
     @NSManaged public var Name: String?
     @NSManaged public var Occupation: String?
     @NSManaged public var Photo: String?
+    @NSManaged public var RaceID: Int32
     @NSManaged public var Race: RaceCoreData?
 }

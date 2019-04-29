@@ -11,8 +11,8 @@ import CoreData
 
 //Model for remote controller
 struct Race: Codable {
-    var ID: Int
-    var Name: String
+    var ID: Int? = 0
+    var Name: String? = ""
 }
 
 //Model for local controller
