@@ -1,31 +1,20 @@
 //
-//  Endpoints.swift
+//  Request.swift
 //  yorha-client-ios
 //
-//  Created by Marco Vazquez on 4/27/19.
+//  Created by Marco Vazquez on 4/28/19.
 //  Copyright © 2019 Marco Vazquez. All rights reserved.
 //
 
 import Foundation
 
-protocol Endpoint {
-    var path: String { get }
-}
-
-enum Endpoints {
-    case automatas
-    case bosses
-    case podPrograms
-    case weapons
+public func request(endpoint: String, id: Int? = 0, method: String? = "GET") -> URLRequest {
+    let url = id != 0 ? componentUrl(endpoint: endpoint, id: id) : componentUrl(endpoint: endpoint)
+    var request = URLRequest(url: url)
+    request.httpMethod = method
+    request.setValue("Basic YWRtaW46cGFzc3dvcmQ=", forHTTPHeaderField: "Authorization")
     
-    public var path: String {
-        switch self {
-            case .automatas: return "/automatas"
-            case .bosses: return "/bosses"
-            case .podPrograms: return "/podprograms"
-            case .weapons: return "/weapons"
-        }
-    }
+    return request
 }
 
 public func componentUrl(endpoint: String, id: Int? = 0) -> URL {
