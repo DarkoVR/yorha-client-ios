@@ -16,9 +16,9 @@ struct Race: Codable {
 }
 
 //Model for local controller
-public class RaceCoreData: NSManagedObject {
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<RaceCoreData> {
-        return NSFetchRequest<RaceCoreData>(entityName: "Race");
+public class RaceCD: NSManagedObject {
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<RaceCD> {
+        return NSFetchRequest<RaceCD>(entityName: "RaceCD");
     }
     
     @NSManaged public var ID: Int32

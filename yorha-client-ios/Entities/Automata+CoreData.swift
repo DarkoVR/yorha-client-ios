@@ -20,9 +20,9 @@ struct Automata: Codable {
 }
 
 //Model for local controller
-public class AutomataCoreData: NSManagedObject {
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<AutomataCoreData> {
-        return NSFetchRequest<AutomataCoreData>(entityName: "Automata");
+public class AutomataCD: NSManagedObject {
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<AutomataCD> {
+        return NSFetchRequest<AutomataCD>(entityName: "AutomataCD");
     }
     
     @NSManaged public var ID: Int32
@@ -30,5 +30,5 @@ public class AutomataCoreData: NSManagedObject {
     @NSManaged public var Occupation: String?
     @NSManaged public var Photo: String?
     @NSManaged public var RaceID: Int32
-    @NSManaged public var Race: RaceCoreData?
+    @NSManaged public var Race: RaceCD?
 }
