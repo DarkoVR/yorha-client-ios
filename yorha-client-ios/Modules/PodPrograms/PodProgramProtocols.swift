@@ -2,7 +2,7 @@
 //  PodProgramProtocols.swift
 //  yorha-client-ios
 //
-//  Created by Marco Vazquez on 4/26/19.
+//  Created by Marco Vazquez on 4/30/19.
 //  Copyright © 2019 Marco Vazquez. All rights reserved.
 //
 
@@ -15,26 +15,16 @@ protocol PodProgramWireframeProtocol: class {
 //MARK: Presenter -
 protocol PodProgramPresenterProtocol: class {
 
-    var interactor: PodProgramInteractorInputProtocol? { get set }
 }
 
 //MARK: Interactor -
-protocol PodProgramInteractorOutputProtocol: class {
+protocol PodProgramInteractorProtocol: class {
 
-    /* Interactor -> Presenter */
-}
-
-protocol PodProgramInteractorInputProtocol: class {
-
-    var presenter: PodProgramInteractorOutputProtocol?  { get set }
-
-    /* Presenter -> Interactor */
+  var presenter: PodProgramPresenterProtocol?  { get set }
 }
 
 //MARK: View -
 protocol PodProgramViewProtocol: class {
 
-    var presenter: PodProgramPresenterProtocol?  { get set }
-
-    /* Presenter -> ViewController */
+  var presenter: PodProgramPresenterProtocol?  { get set }
 }

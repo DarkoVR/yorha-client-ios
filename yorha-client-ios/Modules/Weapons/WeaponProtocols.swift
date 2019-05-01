@@ -2,7 +2,7 @@
 //  WeaponProtocols.swift
 //  yorha-client-ios
 //
-//  Created by Marco Vazquez on 4/26/19.
+//  Created by Marco Vazquez on 4/30/19.
 //  Copyright © 2019 Marco Vazquez. All rights reserved.
 //
 
@@ -15,26 +15,16 @@ protocol WeaponWireframeProtocol: class {
 //MARK: Presenter -
 protocol WeaponPresenterProtocol: class {
 
-    var interactor: WeaponInteractorInputProtocol? { get set }
 }
 
 //MARK: Interactor -
-protocol WeaponInteractorOutputProtocol: class {
+protocol WeaponInteractorProtocol: class {
 
-    /* Interactor -> Presenter */
-}
-
-protocol WeaponInteractorInputProtocol: class {
-
-    var presenter: WeaponInteractorOutputProtocol?  { get set }
-
-    /* Presenter -> Interactor */
+  var presenter: WeaponPresenterProtocol?  { get set }
 }
 
 //MARK: View -
 protocol WeaponViewProtocol: class {
 
-    var presenter: WeaponPresenterProtocol?  { get set }
-
-    /* Presenter -> ViewController */
+  var presenter: WeaponPresenterProtocol?  { get set }
 }

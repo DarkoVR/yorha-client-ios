@@ -2,7 +2,7 @@
 //  BossProtocols.swift
 //  yorha-client-ios
 //
-//  Created by Marco Vazquez on 4/27/19.
+//  Created by Marco Vazquez on 4/30/19.
 //  Copyright © 2019 Marco Vazquez. All rights reserved.
 //
 
@@ -15,26 +15,16 @@ protocol BossWireframeProtocol: class {
 //MARK: Presenter -
 protocol BossPresenterProtocol: class {
 
-    var interactor: BossInteractorInputProtocol? { get set }
 }
 
 //MARK: Interactor -
-protocol BossInteractorOutputProtocol: class {
+protocol BossInteractorProtocol: class {
 
-    /* Interactor -> Presenter */
-}
-
-protocol BossInteractorInputProtocol: class {
-
-    var presenter: BossInteractorOutputProtocol?  { get set }
-
-    /* Presenter -> Interactor */
+  var presenter: BossPresenterProtocol?  { get set }
 }
 
 //MARK: View -
 protocol BossViewProtocol: class {
 
-    var presenter: BossPresenterProtocol?  { get set }
-
-    /* Presenter -> ViewController */
+  var presenter: BossPresenterProtocol?  { get set }
 }

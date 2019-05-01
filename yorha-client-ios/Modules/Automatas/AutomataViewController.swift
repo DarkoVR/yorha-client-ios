@@ -9,13 +9,13 @@
 import UIKit
 
 class AutomataViewController: UITableViewController, AutomataViewProtocol {
-    
-    var presenter: AutomataPresenterProtocol?
-    
-    override func viewDidLoad() {
+
+	var presenter: AutomataPresenterProtocol?
+
+	override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+
     @IBAction func refresh(_ sender: UIRefreshControl) {
         print("refreshing done!")
         sender.endRefreshing()

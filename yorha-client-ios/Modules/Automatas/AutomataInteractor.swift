@@ -2,13 +2,13 @@
 //  AutomataInteractor.swift
 //  yorha-client-ios
 //
-//  Created by Marco Vazquez on 4/27/19.
+//  Created by Marco Vazquez on 4/30/19.
 //  Copyright © 2019 Marco Vazquez. All rights reserved.
 //
 
 import UIKit
 
-class AutomataInteractor: AutomataInteractorInputProtocol {
+class AutomataInteractor: AutomataInteractorProtocol {
 
-    weak var presenter: AutomataInteractorOutputProtocol?
+    weak var presenter: AutomataPresenterProtocol?
 }
