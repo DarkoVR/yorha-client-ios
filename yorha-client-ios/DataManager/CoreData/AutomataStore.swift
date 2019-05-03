@@ -8,7 +8,7 @@
 
 import CoreData
 
-class AutomataStore {
+class AutomataStore: AutomataLocalDataProtocol {
     
     func retrieveAutomatas() throws -> [AutomataCD]  {
         guard let managedOC = CoreDataStore.managedObjectContext else {
@@ -20,19 +20,22 @@ class AutomataStore {
         return try managedOC.fetch(request)
     }
     
-    func storeAutomata(automataCD: AutomataCD) throws {
+    func storeAutomata(
+            id: Int32, name: String, occupation: String, photo: String, raceID: Int32, raceName: String
+        ) throws {
         guard let managedOC = CoreDataStore.managedObjectContext else {
             throw PersistenceError.managedObjectContextNotFound
         }
         
         if let newAutomata = NSEntityDescription.entity(forEntityName: String(describing: AutomataCD.self), in: managedOC) {
             let automata = AutomataCD(entity: newAutomata, insertInto: managedOC)
-            automata.ID = Int32(automataCD.ID)
-            automata.Name = automataCD.Name
-            automata.Occupation = automataCD.Occupation
-            automata.Photo = automataCD.Photo
-            automata.RaceID = Int32(automataCD.RaceID)
-            automata.Race = automataCD.Race
+            automata.id = Int32(id)
+            automata.name = name
+            automata.occupation = occupation
+            automata.photo = photo
+            automata.raceID = Int32(raceID)
+            automata.race?.id = Int32(raceID)
+            automata.race?.name = raceName
             try managedOC.save()
         }
         
