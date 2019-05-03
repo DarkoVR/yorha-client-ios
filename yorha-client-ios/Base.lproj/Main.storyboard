@@ -76,30 +76,30 @@
         <!--Automata View Controller-->
         <scene sceneID="oae-d8-6Cd">
             <objects>
-                <tableViewController id="vTn-WL-1Mo" customClass="AutomataViewController" customModule="yorha_client_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="AutomataViewController" id="vTn-WL-1Mo" customClass="AutomataViewController" customModule="yorha_client_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FzJ-pV-Jdv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="automataCell" rowHeight="141" id="KqL-Rk-XMr">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="AutomataCell" rowHeight="141" id="KqL-Rk-XMr" customClass="AutomataCell" customModule="yorha_client_ios" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="141"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KqL-Rk-XMr" id="LCY-ZU-hxa">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="140.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="376" height="140.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="automataImageView" translatesAutoresizingMaskIntoConstraints="NO" id="vLC-Vr-4fp">
-                                            <rect key="frame" x="0.0" y="0.0" width="141" height="140.5"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="automataImageView" image="icon-app" translatesAutoresizingMaskIntoConstraints="NO" id="vLC-Vr-4fp">
+                                            <rect key="frame" x="0.0" y="0.0" width="115" height="140.5"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="automataOccupationLabel" text="Occupation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1m-gL-Bwj">
-                                            <rect key="frame" x="149" y="78" width="245" height="21"/>
+                                            <rect key="frame" x="123" y="78" width="245" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="autpmataNameLabel" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSK-dg-1Xs">
-                                            <rect key="frame" x="149" y="23" width="245" height="37"/>
+                                            <rect key="frame" x="123" y="23" width="245" height="37"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="37" id="7uo-ud-SgL"/>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="245" id="sH3-qI-FKe"/>
@@ -123,6 +123,11 @@
                                         <constraint firstItem="vLC-Vr-4fp" firstAttribute="leading" secondItem="LCY-ZU-hxa" secondAttribute="leading" id="tBf-E7-KtB"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="name" destination="gSK-dg-1Xs" id="xHJ-Vt-cj8"/>
+                                    <outlet property="occupation" destination="z1m-gL-Bwj" id="SvZ-R3-Mzq"/>
+                                    <outlet property="photo" destination="vLC-Vr-4fp" id="E6W-4u-48k"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -143,11 +148,11 @@
             </objects>
             <point key="canvasLocation" x="1852.1739130434785" y="136.60714285714286"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Automatas-->
         <scene sceneID="rFe-o6-7zu">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="V3s-7j-WUN" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="mostRecent" id="OU2-T9-C61"/>
+                    <tabBarItem key="tabBarItem" title="Automatas" image="AutomataIcon" id="OU2-T9-C61"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mhG-AS-wgD">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -165,7 +170,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="2GA-dm-Vd9">
             <objects>
-                <tabBarController storyboardIdentifier="automataTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="x3M-bJ-Gqm" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="x3M-bJ-Gqm" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VK5-La-QST">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -181,4 +186,8 @@
             <point key="canvasLocation" x="31.884057971014496" y="136.60714285714286"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AutomataIcon" width="25" height="25"/>
+        <image name="icon-app" width="28.5" height="28.5"/>
+    </resources>
 </document>
