@@ -8,32 +8,35 @@
 
 import Foundation
 
-class AutomataSession {
+class AutomataSession: AutomataRemoteDataProtocol {
+    var interactor: AutomataInteractorProtocol?
+    var presenter: AutomataPresenterProtocol?
     
     func retrieveAutomatas() {
-        let task = URLSession.shared.dataTask(
-            with: request(endpoint: Endpoints.automatas)
-        ) {
+        let petition = request(endpoint: Endpoints.automatas)
+        URLSession.shared.dataTask(with: petition) {
             data, response, error in
             
             guard let data = data, error == nil else {
                 print("error = \(error?.localizedDescription as Any)")
+                self.interactor?.onError()
                 return
             }
-            
+        
             if let jsonPetitions = try? JSONDecoder().decode([Automata].self, from: data) {
-                print(jsonPetitions)
+                print("petition made to: \(petition) with method: \(petition.httpMethod ?? "")")
+                DispatchQueue.main.async {
+                    self.interactor?.onPostsRetrieved(jsonPetitions)
+                }
             } else {
-                print("somenthing went wrong!")
+                self.interactor?.onError()
             }
-        }
-        task.resume()
+        }.resume()
     }
     
     func retrieveOneAutomata(automata: Automata) {
-        let task = URLSession.shared.dataTask(
-            with: request(endpoint: Endpoints.automatas, id: automata.ID)
-        ) {
+        let petition = request(endpoint: Endpoints.automatas, id: automata.ID)
+        URLSession.shared.dataTask(with: petition) {
             data, response, error in
             
             guard let data = data, error == nil else {
@@ -46,18 +49,16 @@ class AutomataSession {
             } else {
                 print("somenthing went wrong!")
             }
-        }
-        task.resume()
+        }.resume()
     }
     
-    func storeAutomata(automata: Automata){
+    func storeAutomata(automata: Automata) {
         guard let uploadData = try? JSONEncoder().encode(automata) else {
             return
         }
         
-        let task = URLSession.shared.uploadTask(
-            with: request(endpoint: Endpoints.automatas, method: Methods.post), from: uploadData
-        ) {
+        let petition = request(endpoint: Endpoints.automatas, method: Methods.post)
+        URLSession.shared.uploadTask(with: petition, from: uploadData) {
             data, response, error in
             
             guard let _ = data, error == nil else {
@@ -66,8 +67,7 @@ class AutomataSession {
             }
             
             print("Automata stored!")
-        }
-        task.resume()
+        }.resume()
     }
     
     func updateAutomata(automata: Automata) {
@@ -75,9 +75,8 @@ class AutomataSession {
             return
         }
         
-        let task = URLSession.shared.uploadTask(
-            with: request(endpoint: Endpoints.automatas, id: automata.ID, method: Methods.put), from: uploadData
-        ) {
+        let petition = request(endpoint: Endpoints.automatas, id: automata.ID, method: Methods.put)
+        URLSession.shared.uploadTask(with: petition, from: uploadData) {
             data, response, error in
             
             guard let _ = data, error == nil else {
@@ -86,14 +85,12 @@ class AutomataSession {
             }
             
             print("Automata updated!")
-        }
-        task.resume()
+        }.resume()
     }
     
     func deleteAutomata(automata: Automata) {
-        let task = URLSession.shared.dataTask(
-            with: request(endpoint: Endpoints.automatas, id: automata.ID, method: Methods.delete)
-        ){
+        let petition = request(endpoint: Endpoints.automatas, id: automata.ID, method: Methods.delete)
+        URLSession.shared.dataTask(with: petition){
             data, response, error in
             
             guard let _ = data, error == nil else {
@@ -102,7 +99,6 @@ class AutomataSession {
             }
             
             print("Automata deleted!")
-        }
-        task.resume()
+        }.resume()
     }
 }
