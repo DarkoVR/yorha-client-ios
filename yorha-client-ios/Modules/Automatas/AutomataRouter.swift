@@ -10,19 +10,31 @@ import UIKit
 
 class AutomataRouter: AutomataWireframeProtocol {
 
-    weak var viewController: UIViewController?
+    weak var viewController: UITableViewController?
 
     static func createModule() -> UIViewController {
-        // Change to get view from storyboard if not using progammatic UI
-        let view = AutomataViewController(nibName: nil, bundle: nil)
-        let interactor = AutomataInteractor()
-        let router = AutomataRouter()
-        let presenter = AutomataPresenter(interface: view, interactor: interactor, router: router)
+        let mainView = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "mainTabBarController")
+        if let view = mainView.children[0].children[0] as? AutomataViewController {
+            let interactor = AutomataInteractor()
+            let router = AutomataRouter()
+            let presenter = AutomataPresenter(interface: view, interactor: interactor, router: router)
+            let localData = AutomataStore()
+            let remoteData = AutomataSession()
+            
+            view.presenter = presenter
+            presenter.view = view
+            presenter.interactor = interactor
+            presenter.wireFrame = router
+            interactor.presenter = presenter
+            interactor.remoteData = remoteData
+            interactor.localData = localData
+            remoteData.interactor = interactor
+            remoteData.presenter = presenter
+            router.viewController = view
+            
+            return mainView
+        }
 
-        view.presenter = presenter
-        interactor.presenter = presenter
-        router.viewController = view
-
-        return view
+        return UITableViewController()
     }
 }
