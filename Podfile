@@ -6,5 +6,5 @@ target 'yorha-client-ios' do
   use_frameworks!
 
   # Pods for yorha-client-ios
-  pod 'AlamofireImage', '~> 3.5.2'
+  pod 'AlamofireImage'
 end
