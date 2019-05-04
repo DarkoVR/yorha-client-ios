@@ -45,3 +45,18 @@ func stopLoading() {
         vSpinner = nil
     }
 }
+
+func reloadData(onTableViewController: UITableViewController){
+    DispatchQueue.main.async {
+        onTableViewController.tableView.reloadData()
+    }
+}
+
+func isConnectedToInternet() -> Bool {
+    let hostname = "google.com"
+    let hostinfo = gethostbyname2(hostname, AF_INET6)
+    if hostinfo != nil {
+        return true
+    }
+    return false
+}
