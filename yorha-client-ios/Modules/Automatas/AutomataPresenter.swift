@@ -9,15 +9,41 @@
 import UIKit
 
 class AutomataPresenter: AutomataPresenterProtocol {
-
-    weak private var view: AutomataViewProtocol?
+    var wireFrame: AutomataWireframeProtocol?
+    weak internal var view: AutomataViewProtocol?
     var interactor: AutomataInteractorProtocol?
-    private let router: AutomataWireframeProtocol
 
     init(interface: AutomataViewProtocol, interactor: AutomataInteractorProtocol?, router: AutomataWireframeProtocol) {
         self.view = interface
         self.interactor = interactor
-        self.router = router
+        self.wireFrame = router
+    }
+    
+    func viewDidLoad(){
+        view?.showLoading()
+        interactor?.retrieveData()
+    }
+    
+    func viewDidRefresh(){
+        interactor?.retrieveData()
+    }
+    
+    func showDetailScreen(_ data: Automata) {
+        print("Send to the detail screen")
+    }
+    
+    func didRetrieveData(_ data: [Automata]){
+        view?.hideLoading()
+        view?.showData(with: data)
+    }
+    
+    func onError() {
+        view?.hideLoading()
+        view?.showError()
+    }
+    
+    func isInternetConnected() -> Bool {
+        return (view?.isInternetConnected())!
     }
 
 }
