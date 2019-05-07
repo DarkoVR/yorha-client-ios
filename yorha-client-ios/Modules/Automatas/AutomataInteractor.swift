@@ -38,19 +38,19 @@ class AutomataInteractor: AutomataInteractorProtocol {
                     remoteData?.retrieveAutomatas()
                 }else{
                     print("Local data for Automatas retrieved")
-                    presenter?.didRetrieveData(automataList)
+                    presenter?.didRetrieveData(data: automataList)
                 }
             } else {
                 remoteData?.retrieveAutomatas()
             }
             
         } catch {
-            presenter?.didRetrieveData([])
+            presenter?.didRetrieveData(data: [])
         }
     }
     
     func onPostsRetrieved(_ data: [Automata]) {
-        presenter?.didRetrieveData(data)
+        presenter?.didRetrieveData(data: data)
         
         for automata in data {
             do {
