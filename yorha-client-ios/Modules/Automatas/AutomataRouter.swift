@@ -24,7 +24,7 @@ class AutomataRouter: AutomataWireframeProtocol {
             view.presenter = presenter
             presenter.view = view
             presenter.interactor = interactor
-            presenter.wireFrame = router
+            presenter.router = router
             interactor.presenter = presenter
             interactor.remoteData = remoteData
             interactor.localData = localData
@@ -36,5 +36,13 @@ class AutomataRouter: AutomataWireframeProtocol {
         }
 
         return UITableViewController()
+    }
+    
+    func showDetailScreen(view: AutomataViewProtocol, data: Automata) {
+        let detailViewController = AutomataDetailRouter.createModule(data: data)
+        
+        if let sourceView = view as? UIViewController {
+            sourceView.navigationController?.pushViewController(detailViewController, animated: true)
+        }
     }
 }

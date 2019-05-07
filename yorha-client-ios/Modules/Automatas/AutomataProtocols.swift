@@ -11,16 +11,17 @@ import UIKit
 //MARK: Wireframe -
 protocol AutomataWireframeProtocol: class {
     static func createModule() -> UIViewController
+    func showDetailScreen(view: AutomataViewProtocol, data: Automata)
 }
 //MARK: Presenter -
 protocol AutomataPresenterProtocol: class {
     var view: AutomataViewProtocol? { get set }
     var interactor: AutomataInteractorProtocol? { get set }
-    var wireFrame: AutomataWireframeProtocol? { get set }
+    var router: AutomataWireframeProtocol? { get set }
     func viewDidLoad()
     func viewDidRefresh()
-    func showDetailScreen(_ data: Automata)
-    func didRetrieveData(_ data: [Automata])
+    func showDetailScreen(data: Automata)
+    func didRetrieveData(data: [Automata])
     func onError()
     func isInternetConnected() -> Bool
 }

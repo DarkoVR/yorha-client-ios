@@ -70,7 +70,7 @@ extension AutomataViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        alertMessage(onViewController: self, title: "\(indexPath.row)", message: "\(dataList[indexPath.row])")
+        presenter?.showDetailScreen(data: dataList[indexPath.row])
     }
 }
 

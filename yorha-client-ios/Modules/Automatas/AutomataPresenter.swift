@@ -9,14 +9,14 @@
 import UIKit
 
 class AutomataPresenter: AutomataPresenterProtocol {
-    var wireFrame: AutomataWireframeProtocol?
+    var router: AutomataWireframeProtocol?
     weak internal var view: AutomataViewProtocol?
     var interactor: AutomataInteractorProtocol?
 
     init(interface: AutomataViewProtocol, interactor: AutomataInteractorProtocol?, router: AutomataWireframeProtocol) {
         self.view = interface
         self.interactor = interactor
-        self.wireFrame = router
+        self.router = router
     }
     
     func viewDidLoad(){
@@ -28,11 +28,11 @@ class AutomataPresenter: AutomataPresenterProtocol {
         interactor?.retrieveData()
     }
     
-    func showDetailScreen(_ data: Automata) {
-        print("Send to the detail screen")
+    func showDetailScreen(data: Automata) {
+        router?.showDetailScreen(view: view!, data: data)
     }
     
-    func didRetrieveData(_ data: [Automata]){
+    func didRetrieveData(data: [Automata]){
         view?.hideLoading()
         view?.showData(with: data)
     }
