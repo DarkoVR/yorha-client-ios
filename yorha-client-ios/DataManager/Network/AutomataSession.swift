@@ -24,7 +24,7 @@ class AutomataSession: AutomataRemoteDataProtocol {
             }
         
             if let jsonPetitions = try? JSONDecoder().decode([Automata].self, from: data) {
-                print("petition made to: \(petition) with method: \(petition.httpMethod ?? "")")
+                print("petition made to: \(petition) \nwith method: \(petition.httpMethod ?? "") \nwith data: \(jsonPetitions)")
                 DispatchQueue.main.async {
                     self.interactor?.onPostsRetrieved(jsonPetitions)
                 }
