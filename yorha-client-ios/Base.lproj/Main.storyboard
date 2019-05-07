@@ -10,68 +10,53 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Automata Detail View Controller-->
         <scene sceneID="NVT-Nb-xWd">
             <objects>
-                <viewController storyboardIdentifier="automataDetailViewController" id="6h3-fp-RGb" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="automataDetailViewController" id="6h3-fp-RGb" customClass="AutomataDetailViewController" customModule="yorha_client_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u7I-Z8-RO0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aKV-Fb-X40">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="316"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="316" id="XS0-hU-zvm"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aKV-Fb-X40">
+                                <rect key="frame" x="0.0" y="93" width="414" height="414"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCd-VF-By6">
-                                <rect key="frame" x="20" y="324" width="374" height="71"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCd-VF-By6">
+                                <rect key="frame" x="20" y="515" width="374" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Occupation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7D-4I-krP">
-                                <rect key="frame" x="20" y="403" width="374" height="74"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="74" id="vDf-Ff-QDF"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Occupation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7D-4I-krP">
+                                <rect key="frame" x="20" y="594" width="374" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Race" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17d-zx-6Tx">
-                                <rect key="frame" x="20" y="485" width="374" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Race" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17d-zx-6Tx">
+                                <rect key="frame" x="20" y="676" width="374" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="CCd-VF-By6" firstAttribute="top" secondItem="aKV-Fb-X40" secondAttribute="bottom" constant="8" symbolic="YES" id="36m-Rg-HHQ"/>
-                            <constraint firstItem="D7D-4I-krP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="17d-zx-6Tx" secondAttribute="leading" id="EuY-H1-bH7"/>
-                            <constraint firstItem="D7D-4I-krP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="u7I-Z8-RO0" secondAttribute="leadingMargin" id="KQE-Yo-8LV"/>
-                            <constraint firstItem="CCd-VF-By6" firstAttribute="trailing" secondItem="17d-zx-6Tx" secondAttribute="trailing" id="UwZ-d7-30q"/>
-                            <constraint firstItem="D7D-4I-krP" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="u7I-Z8-RO0" secondAttribute="trailingMargin" id="WNS-vd-VDN"/>
-                            <constraint firstItem="17d-zx-6Tx" firstAttribute="top" secondItem="D7D-4I-krP" secondAttribute="bottom" constant="8" symbolic="YES" id="YaA-Rg-CPC"/>
-                            <constraint firstItem="aKV-Fb-X40" firstAttribute="leading" secondItem="u7I-Z8-RO0" secondAttribute="leading" id="Z8i-aL-73z"/>
-                            <constraint firstItem="D7D-4I-krP" firstAttribute="centerX" secondItem="aKV-Fb-X40" secondAttribute="centerX" id="aFz-Vu-PTv"/>
-                            <constraint firstItem="D7D-4I-krP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="CCd-VF-By6" secondAttribute="leading" id="bDA-nH-MyG"/>
-                            <constraint firstItem="D7D-4I-krP" firstAttribute="top" secondItem="CCd-VF-By6" secondAttribute="bottom" constant="8" symbolic="YES" id="cQs-oI-F7h"/>
-                            <constraint firstItem="D7D-4I-krP" firstAttribute="top" secondItem="u7I-Z8-RO0" secondAttribute="top" constant="403" id="fnv-9t-PxD"/>
-                            <constraint firstItem="D7D-4I-krP" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CCd-VF-By6" secondAttribute="trailing" id="fxC-cV-uXP"/>
-                            <constraint firstItem="CCd-VF-By6" firstAttribute="trailing" secondItem="D7D-4I-krP" secondAttribute="trailing" id="jgU-Tj-Zi9"/>
-                            <constraint firstItem="CCd-VF-By6" firstAttribute="leading" secondItem="u7I-Z8-RO0" secondAttribute="leadingMargin" id="mdJ-tD-DFI"/>
-                            <constraint firstItem="aKV-Fb-X40" firstAttribute="top" secondItem="u7I-Z8-RO0" secondAttribute="top" id="n4t-el-ofK"/>
-                            <constraint firstItem="D7D-4I-krP" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="17d-zx-6Tx" secondAttribute="trailing" id="n6W-0s-ENe"/>
-                            <constraint firstItem="CCd-VF-By6" firstAttribute="leading" secondItem="D7D-4I-krP" secondAttribute="leading" id="oRS-7U-zq8"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="RlD-GE-VVP"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="aKV-Fb-X40" id="Mhr-fv-Fvy"/>
+                        <outlet property="name" destination="CCd-VF-By6" id="x2e-gy-Ake"/>
+                        <outlet property="occupation" destination="D7D-4I-krP" id="Uqg-tW-ZP2"/>
+                        <outlet property="race" destination="17d-zx-6Tx" id="yHB-HD-jgr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dtw-Re-yQv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1852" y="-583"/>
+            <point key="canvasLocation" x="2751" y="137"/>
         </scene>
         <!--Automata View Controller-->
         <scene sceneID="oae-d8-6Cd">
