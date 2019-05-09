@@ -8,13 +8,13 @@
 
 import UIKit
 
-class AutomataRouter: AutomataWireframeProtocol {
+class AutomataRouter: AutomataRouterProtocol {
 
-    weak var viewController: UITableViewController?
+    weak var viewController: UIViewController?
 
     static func createModule() -> UIViewController {
-        let mainView = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "mainTabBarController")
-        if let view = mainView.children[0].children[0] as? AutomataViewController {
+        let mainView = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "AutomataNavController")
+        if let view = mainView.children.first as? AutomataViewController {
             let interactor = AutomataInteractor()
             let router = AutomataRouter()
             let presenter = AutomataPresenter(interface: view, interactor: interactor, router: router)
@@ -35,7 +35,7 @@ class AutomataRouter: AutomataWireframeProtocol {
             return mainView
         }
 
-        return UITableViewController()
+        return UIViewController()
     }
     
     func showDetailScreen(view: AutomataViewProtocol, data: Automata) {

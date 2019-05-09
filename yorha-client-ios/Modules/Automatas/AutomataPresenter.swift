@@ -9,11 +9,11 @@
 import UIKit
 
 class AutomataPresenter: AutomataPresenterProtocol {
-    var router: AutomataWireframeProtocol?
+    var router: AutomataRouterProtocol?
     weak internal var view: AutomataViewProtocol?
     var interactor: AutomataInteractorProtocol?
 
-    init(interface: AutomataViewProtocol, interactor: AutomataInteractorProtocol?, router: AutomataWireframeProtocol) {
+    init(interface: AutomataViewProtocol, interactor: AutomataInteractorProtocol?, router: AutomataRouterProtocol) {
         self.view = interface
         self.interactor = interactor
         self.router = router

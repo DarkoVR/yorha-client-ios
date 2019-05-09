@@ -9,7 +9,7 @@
 import UIKit
 
 //MARK: Wireframe -
-protocol AutomataWireframeProtocol: class {
+protocol AutomataRouterProtocol: class {
     static func createModule() -> UIViewController
     func showDetailScreen(view: AutomataViewProtocol, data: Automata)
 }
@@ -17,7 +17,7 @@ protocol AutomataWireframeProtocol: class {
 protocol AutomataPresenterProtocol: class {
     var view: AutomataViewProtocol? { get set }
     var interactor: AutomataInteractorProtocol? { get set }
-    var router: AutomataWireframeProtocol? { get set }
+    var router: AutomataRouterProtocol? { get set }
     func viewDidLoad()
     func viewDidRefresh()
     func showDetailScreen(data: Automata)
@@ -51,10 +51,10 @@ protocol AutomataRemoteDataProtocol: class {
     var interactor: AutomataInteractorProtocol?  { get set }
     var presenter: AutomataPresenterProtocol?  { get set }
     func retrieveAutomatas()
-    func retrieveOneAutomata(automata: Automata)
-    func storeAutomata(automata: Automata)
-    func updateAutomata(automata: Automata)
-    func deleteAutomata(automata: Automata)
+    func retrieveOneAutomata(data: Automata)
+    func storeAutomata(data: Automata)
+    func updateAutomata(data: Automata)
+    func deleteAutomata(data: Automata)
 }
 
 protocol AutomataLocalDataProtocol: class {
