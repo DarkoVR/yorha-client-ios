@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import CoreData
 
 struct Race: Codable {
     var ID: Int? = 0

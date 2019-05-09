@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import CoreData
 
 struct Automata: Codable {
     var ID: Int
