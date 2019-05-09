@@ -34,8 +34,8 @@ class AutomataSession: AutomataRemoteDataProtocol {
         }.resume()
     }
     
-    func retrieveOneAutomata(automata: Automata) {
-        let petition = request(endpoint: Endpoints.automatas, id: automata.ID)
+    func retrieveOneAutomata(data: Automata) {
+        let petition = request(endpoint: Endpoints.automatas, id: data.ID)
         URLSession.shared.dataTask(with: petition) {
             data, response, error in
             
@@ -52,8 +52,8 @@ class AutomataSession: AutomataRemoteDataProtocol {
         }.resume()
     }
     
-    func storeAutomata(automata: Automata) {
-        guard let uploadData = try? JSONEncoder().encode(automata) else {
+    func storeAutomata(data: Automata) {
+        guard let uploadData = try? JSONEncoder().encode(data) else {
             return
         }
         
@@ -70,12 +70,12 @@ class AutomataSession: AutomataRemoteDataProtocol {
         }.resume()
     }
     
-    func updateAutomata(automata: Automata) {
-        guard let uploadData = try? JSONEncoder().encode(automata) else {
+    func updateAutomata(data: Automata) {
+        guard let uploadData = try? JSONEncoder().encode(data) else {
             return
         }
         
-        let petition = request(endpoint: Endpoints.automatas, id: automata.ID, method: Methods.put)
+        let petition = request(endpoint: Endpoints.automatas, id: data.ID, method: Methods.put)
         URLSession.shared.uploadTask(with: petition, from: uploadData) {
             data, response, error in
             
@@ -88,8 +88,8 @@ class AutomataSession: AutomataRemoteDataProtocol {
         }.resume()
     }
     
-    func deleteAutomata(automata: Automata) {
-        let petition = request(endpoint: Endpoints.automatas, id: automata.ID, method: Methods.delete)
+    func deleteAutomata(data: Automata) {
+        let petition = request(endpoint: Endpoints.automatas, id: data.ID, method: Methods.delete)
         URLSession.shared.dataTask(with: petition){
             data, response, error in
             
