@@ -8,12 +8,12 @@
 
 import UIKit
 
-class AutomataDetailRouter: AutomataDetailWireframeProtocol {
+class AutomataDetailRouter: AutomataDetailRouterProtocol {
 
     weak var viewController: UIViewController?
 
     static func createModule(data: Automata) -> UIViewController {
-        let mainView = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "automataDetailViewController")
+        let mainView = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "AutomataDetailViewController")
         if let view = mainView as? AutomataDetailViewController {
             let router = AutomataDetailRouter()
             let presenter = AutomataDetailPresenter(interface: view, router: router)

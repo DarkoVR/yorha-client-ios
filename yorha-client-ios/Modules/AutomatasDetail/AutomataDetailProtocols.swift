@@ -9,13 +9,13 @@
 import UIKit
 
 //MARK: Wireframe -
-protocol AutomataDetailWireframeProtocol: class {
+protocol AutomataDetailRouterProtocol: class {
     static func createModule(data: Automata) -> UIViewController
 }
 //MARK: Presenter -
 protocol AutomataDetailPresenterProtocol: class {
     var view: AutomataDetailViewProtocol? { get set }
-    var router: AutomataDetailWireframeProtocol? { get set }
+    var router: AutomataDetailRouterProtocol? { get set }
     var data: Automata? { get set }
     func viewDidLoad()
 }

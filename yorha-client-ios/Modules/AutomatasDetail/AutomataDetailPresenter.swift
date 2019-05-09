@@ -11,10 +11,10 @@ import UIKit
 class AutomataDetailPresenter: AutomataDetailPresenterProtocol {
     
     weak internal var view: AutomataDetailViewProtocol?
-    var router: AutomataDetailWireframeProtocol?
+    var router: AutomataDetailRouterProtocol?
     var data: Automata?
 
-    init(interface: AutomataDetailViewProtocol, router: AutomataDetailWireframeProtocol) {
+    init(interface: AutomataDetailViewProtocol, router: AutomataDetailRouterProtocol) {
         self.view = interface
         self.router = router
     }
@@ -22,5 +22,4 @@ class AutomataDetailPresenter: AutomataDetailPresenterProtocol {
     func viewDidLoad() {
         view?.showDetail(data: data!)
     }
-
 }
