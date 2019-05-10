@@ -17,11 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let automataModule = AutomataRouter.createModule()
+        let mainView = UIStoryboard(name: "Main", bundle: Bundle.main)
+            .instantiateViewController(withIdentifier: "MainTabBarController") as? UITabBarController
+        mainView?.viewControllers = [
+            AutomataRouter.createModule(),
+            BossRouter.createModule()
+        ]
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = automataModule
+        window?.rootViewController = mainView
         window?.makeKeyAndVisible()
+        
         return true
     }
 
