@@ -5,24 +5,29 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="occupation" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="photo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="race" optional="YES" attributeType="Transformable" customClassName="RaceCD" syncable="YES"/>
         <attribute name="raceID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="race" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RaceCD" inverseName="automata" inverseEntity="RaceCD" syncable="YES"/>
     </entity>
     <entity name="BossCD" representedClassName="BossCD" syncable="YES" codeGenerationType="class">
         <attribute name="faction" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="photo" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="zones" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="zones" optional="YES" attributeType="Transformable" customClassName="[ZoneCD]" syncable="YES"/>
     </entity>
     <entity name="RaceCD" representedClassName="RaceCD" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="automata" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AutomataCD" inverseName="race" inverseEntity="AutomataCD" syncable="YES"/>
+    </entity>
+    <entity name="ZoneCD" representedClassName="ZoneCD" syncable="YES" codeGenerationType="class">
+        <attribute name="bossID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
         <element name="AutomataCD" positionX="-63" positionY="-18" width="128" height="135"/>
-        <element name="RaceCD" positionX="-54" positionY="45" width="128" height="90"/>
         <element name="BossCD" positionX="-63" positionY="45" width="128" height="120"/>
+        <element name="RaceCD" positionX="-54" positionY="45" width="128" height="75"/>
+        <element name="ZoneCD" positionX="-63" positionY="54" width="128" height="90"/>
     </elements>
 </model>
