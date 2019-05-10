@@ -9,15 +9,41 @@
 import UIKit
 
 class PodProgramPresenter: PodProgramPresenterProtocol {
-
-    weak private var view: PodProgramViewProtocol?
+    var router: PodProgramRouterProtocol?
+    weak internal var view: PodProgramViewProtocol?
     var interactor: PodProgramInteractorProtocol?
-    private let router: PodProgramWireframeProtocol
-
-    init(interface: PodProgramViewProtocol, interactor: PodProgramInteractorProtocol?, router: PodProgramWireframeProtocol) {
+    
+    init(interface: PodProgramViewProtocol, interactor: PodProgramInteractorProtocol?, router: PodProgramRouterProtocol) {
         self.view = interface
         self.interactor = interactor
         self.router = router
     }
-
+    
+    func viewDidLoad(){
+        view?.showLoading()
+        interactor?.retrieveData()
+    }
+    
+    func viewDidRefresh(){
+        interactor?.retrieveData()
+    }
+    
+    func showDetailScreen(data: PodProgram) {
+        router?.showDetailScreen(view: view!, data: data)
+    }
+    
+    func didRetrieveData(data: [PodProgram]){
+        view?.hideLoading()
+        view?.showData(with: data)
+    }
+    
+    func onError() {
+        view?.hideLoading()
+        view?.showError()
+    }
+    
+    func isInternetConnected() -> Bool {
+        return (view?.isInternetConnected())!
+    }
+    
 }
