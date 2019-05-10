@@ -22,7 +22,6 @@ class BossInteractor: BossInteractorProtocol {
             if let data = try localData?.retrieveBosses() {
                 let BossList: [Boss] = data.map() {
                     let newZones: [Zone] = []
-                    print("zones: \($0.zones as Any)")
                     return Boss(
                         ID: Int($0.id),
                         Name: $0.name!,
