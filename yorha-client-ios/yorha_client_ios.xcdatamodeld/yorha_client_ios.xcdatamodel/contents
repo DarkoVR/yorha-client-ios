@@ -15,6 +15,13 @@
         <attribute name="photo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="zones" optional="YES" attributeType="Transformable" customClassName="[ZoneCD]" syncable="YES"/>
     </entity>
+    <entity name="PodProgramCD" representedClassName="PodProgramCD" syncable="YES" codeGenerationType="class">
+        <attribute name="cooldown" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="program" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="RaceCD" representedClassName="RaceCD" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -29,5 +36,6 @@
         <element name="BossCD" positionX="-63" positionY="45" width="128" height="120"/>
         <element name="RaceCD" positionX="-54" positionY="45" width="128" height="75"/>
         <element name="ZoneCD" positionX="-63" positionY="54" width="128" height="90"/>
+        <element name="PodProgramCD" positionX="-54" positionY="54" width="128" height="120"/>
     </elements>
 </model>
