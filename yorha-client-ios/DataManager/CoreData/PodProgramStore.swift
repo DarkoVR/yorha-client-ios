@@ -29,7 +29,7 @@ class PodProgramStore: PodProgramLocalDataProtocol {
         
         if let newPodProgram = NSEntityDescription.entity(forEntityName: String(describing: PodProgramCD.self), in: managedOC) {
             let PodProgram = PodProgramCD(entity: newPodProgram, insertInto: managedOC)
-            PodProgram.id = Int32(id)
+            PodProgram.id = id
             PodProgram.name = name
             PodProgram.program = program
             PodProgram.cooldown = cooldown

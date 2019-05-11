@@ -29,12 +29,12 @@ class AutomataStore: AutomataLocalDataProtocol {
         
         if let newAutomata = NSEntityDescription.entity(forEntityName: String(describing: AutomataCD.self), in: managedOC) {
             let automata = AutomataCD(entity: newAutomata, insertInto: managedOC)
-            automata.id = Int32(id)
+            automata.id = id
             automata.name = name
             automata.occupation = occupation
             automata.photo = photo
-            automata.raceID = Int32(raceID)
-            automata.race?.id = Int32(raceID)
+            automata.raceID = raceID
+            automata.race?.id = raceID
             automata.race?.name = raceName
             try managedOC.save()
         }

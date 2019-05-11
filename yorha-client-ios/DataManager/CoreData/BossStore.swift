@@ -29,7 +29,7 @@ class BossStore: BossLocalDataProtocol {
         
         if let bossDescription = NSEntityDescription.entity(forEntityName: String(describing: BossCD.self), in: managedOC) {
             let newBoss = BossCD(entity: bossDescription, insertInto: managedOC)
-            newBoss.id = Int32(id)
+            newBoss.id = id
             newBoss.name = name
             newBoss.faction = faction
             newBoss.photo = photo
