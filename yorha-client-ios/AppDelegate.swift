@@ -20,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         mainView?.viewControllers = [
             AutomataRouter.createModule(),
             BossRouter.createModule(),
-            PodProgramRouter.createModule()
+            PodProgramRouter.createModule(),
+            WeaponRouter.createModule()
         ]
         
         window = UIWindow(frame: UIScreen.main.bounds)
