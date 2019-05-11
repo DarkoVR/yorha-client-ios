@@ -29,7 +29,7 @@ class AutomataInteractor: AutomataInteractorProtocol {
                         RaceID: Int($0.raceID),
                         Race: Race(
                             ID: Int($0.raceID),
-                            Name: $0.name
+                            Name: $0.race?.name
                         )
                     )
                 }
