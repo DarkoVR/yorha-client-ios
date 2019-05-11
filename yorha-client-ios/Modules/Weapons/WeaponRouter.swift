@@ -8,21 +8,41 @@
 
 import UIKit
 
-class WeaponRouter: WeaponWireframeProtocol {
-
+class WeaponRouter: WeaponRouterProtocol {
+    
     weak var viewController: UIViewController?
-
+    
     static func createModule() -> UIViewController {
-        // Change to get view from storyboard if not using progammatic UI
-        let view = WeaponViewController(nibName: nil, bundle: nil)
-        let interactor = WeaponInteractor()
-        let router = WeaponRouter()
-        let presenter = WeaponPresenter(interface: view, interactor: interactor, router: router)
-
-        view.presenter = presenter
-        interactor.presenter = presenter
-        router.viewController = view
-
-        return view
+        let mainView = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "WeaponNavController")
+        if let view = mainView.children.first as? WeaponViewController {
+            let interactor = WeaponInteractor()
+            let router = WeaponRouter()
+            let presenter = WeaponPresenter(interface: view, interactor: interactor, router: router)
+            let localData = WeaponStore()
+            let remoteData = WeaponSession()
+            
+            view.presenter = presenter
+            presenter.view = view
+            presenter.interactor = interactor
+            presenter.router = router
+            interactor.presenter = presenter
+            interactor.remoteData = remoteData
+            interactor.localData = localData
+            remoteData.interactor = interactor
+            remoteData.presenter = presenter
+            router.viewController = view
+            
+            return mainView
+        }
+        
+        return UIViewController()
+    }
+    
+    func showDetailScreen(view: WeaponViewProtocol, data: Weapon) {
+        let detailViewController = WeaponDetailRouter.createModule(data: data)
+        
+        if let sourceView = view as? UIViewController {
+            sourceView.navigationController?.pushViewController(detailViewController, animated: true)
+        }
     }
 }
