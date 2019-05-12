@@ -54,6 +54,10 @@ extension BossViewController {
         return dataList.count
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BossCell", for: indexPath) as! BossCell
         let Bosss = dataList[indexPath.row]
