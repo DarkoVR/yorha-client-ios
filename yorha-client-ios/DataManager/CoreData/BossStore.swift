@@ -33,8 +33,8 @@ class BossStore: BossLocalDataProtocol {
             newBoss.name = name
             newBoss.faction = faction
             newBoss.photo = photo
-            //var zonesList = [ZoneCD]()
-            for item in zones {
+            let zonesList = [ZoneCD]()
+            /*for item in zones {
                 if let zoneDescription = NSEntityDescription.entity(forEntityName: String(describing: ZoneCD.self), in: managedOC) {
                     let newZone = ZoneCD(entity: zoneDescription, insertInto: managedOC)
                     newZone.id = Int32(item.ID)
@@ -43,8 +43,8 @@ class BossStore: BossLocalDataProtocol {
                     //zonesList.append(newZone)
                     newBoss.zones?.append(newZone)
                 }
-            }
-            //newBoss.zones = zonesList
+            }*/
+            newBoss.zones = zonesList
             try managedOC.save()
         }
         

@@ -46,10 +46,10 @@ class BossInteractor: BossInteractorProtocol {
         }
     }
     
-    func onPostsRetrieved(_ data: [Boss]) {
+    func onDataRetrieved(data: [Boss]) {
         presenter?.didRetrieveData(data: data)
         
-        /*for Boss in data {
+        for Boss in data {
             do {
                 try localData?.storeBoss(
                     id: Int32(Boss.ID),
@@ -61,6 +61,6 @@ class BossInteractor: BossInteractorProtocol {
             } catch {
                 
             }
-        }*/
+        }
     }
 }
