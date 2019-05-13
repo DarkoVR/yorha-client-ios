@@ -45,23 +45,22 @@ class PodProgramInteractor: PodProgramInteractorProtocol {
         }
     }
     
-    func onPostsRetrieved(_ data: [PodProgram]) {
+    func onDataRetrieved(data: [PodProgram]) {
         presenter?.didRetrieveData(data: data)
         
-        /*for PodProgram in data {
+        for PodProgram in data {
             do {
                 try localData?.storePodProgram(
                     id: Int32(PodProgram.ID),
                     name: PodProgram.Name,
-                    occupation: PodProgram.Occupation,
-                    photo: PodProgram.Photo,
-                    raceID: Int32(PodProgram.RaceID),
-                    raceName: PodProgram.Race.Name!
+                    program: PodProgram.Program,
+                    cooldown: Int32(PodProgram.Cooldown),
+                    photo: PodProgram.Photo
                 )
             } catch {
                 
             }
-        }*/
+        }
     }
 }
 
