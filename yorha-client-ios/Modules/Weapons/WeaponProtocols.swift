@@ -32,7 +32,7 @@ protocol WeaponInteractorProtocol: class {
     var remoteData: WeaponRemoteDataProtocol?  { get set }
     var localData: WeaponLocalDataProtocol?  { get set }
     func retrieveData()
-    func onPostsRetrieved(_ data: [Weapon])
+    func onDataRetrieved(data: [Weapon])
     func onError()
 }
 

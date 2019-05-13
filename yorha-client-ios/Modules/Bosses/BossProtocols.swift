@@ -32,7 +32,7 @@ protocol BossInteractorProtocol: class {
     var remoteData: BossRemoteDataProtocol?  { get set }
     var localData: BossLocalDataProtocol?  { get set }
     func retrieveData()
-    func onPostsRetrieved(_ data: [Boss])
+    func onDataRetrieved(data: [Boss])
     func onError()
 }
 

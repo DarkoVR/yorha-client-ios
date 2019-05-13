@@ -32,7 +32,7 @@ protocol AutomataInteractorProtocol: class {
     var remoteData: AutomataRemoteDataProtocol?  { get set }
     var localData: AutomataLocalDataProtocol?  { get set }
     func retrieveData()
-    func onPostsRetrieved(_ data: [Automata])
+    func onDataRetrieved(data: [Automata])
     func onError()
 }
 

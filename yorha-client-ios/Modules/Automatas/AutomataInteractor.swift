@@ -49,7 +49,7 @@ class AutomataInteractor: AutomataInteractorProtocol {
         }
     }
     
-    func onPostsRetrieved(_ data: [Automata]) {
+    func onDataRetrieved(data: [Automata]) {
         presenter?.didRetrieveData(data: data)
         
         for automata in data {

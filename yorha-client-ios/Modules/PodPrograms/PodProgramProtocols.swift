@@ -32,7 +32,7 @@ protocol PodProgramInteractorProtocol: class {
     var remoteData: PodProgramRemoteDataProtocol?  { get set }
     var localData: PodProgramLocalDataProtocol?  { get set }
     func retrieveData()
-    func onPostsRetrieved(_ data: [PodProgram])
+    func onDataRetrieved(data: [PodProgram])
     func onError()
 }
 

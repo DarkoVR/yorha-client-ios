@@ -51,7 +51,7 @@ class WeaponInteractor: WeaponInteractorProtocol {
         }
     }
     
-    func onPostsRetrieved(_ data: [Weapon]) {
+    func onDataRetrieved(data: [Weapon]) {
         presenter?.didRetrieveData(data: data)
         
         for Weapon in data {
