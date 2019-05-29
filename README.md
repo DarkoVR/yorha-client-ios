@@ -1,5 +1,5 @@
 # yorha-client-ios
-Yorha ios client app for <a href="https://github.com/DarkoVR/yorha-api">yorha api</a> built over VIPER architectural pattern.
+Yorha ios client app for <a href="https://github.com/marcounbeknownst/yorha-api">yorha api</a> built over VIPER architectural pattern.
 
 #### Technologies used in this project.
 * Swift: Language used across the project.
