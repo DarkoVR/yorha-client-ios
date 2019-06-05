@@ -21,7 +21,7 @@ xcuserdata/
 *.moved-aside
 *.xccheckout
 *.xcscmblueprint
-yorha-client-ios.xcodeproj/
+.DS_Store
 
 ## Obj-C/Swift specific
 *.hmap
